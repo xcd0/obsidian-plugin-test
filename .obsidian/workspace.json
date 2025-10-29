@@ -151,13 +151,13 @@
             }
           },
           {
-            "id": "2d9ce89ce19f3b93",
+            "id": "6d52d2348fca9e9c",
             "type": "leaf",
             "state": {
-              "type": "git-view",
+              "type": "memolog-sidebar",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "file-text",
+              "title": "memolog"
             }
           }
         ],
@@ -182,7 +182,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c48f864eb328147d",
+  "active": "6d52d2348fca9e9c",
   "lastOpenFiles": [
     "memolog/attachments/1761700239619_dumpveiwer___.pdf",
     "memolog/2025-10-29/memo.md",
