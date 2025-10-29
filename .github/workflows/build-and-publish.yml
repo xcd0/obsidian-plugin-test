@@ -36,7 +36,14 @@ jobs:
       - name: Setup Quartz in publish repository
         working-directory: publish-repo
         env:
-          QUARTZ_CONFIG: '{"siteTitle":"My Published Notes","locale":"ja-JP","enableSPA":true,"enablePopovers":true,"baseUrl":"xcd0.github.io/public-memo","typography":{"header":"Schibsted Grotesk","body":"Source Sans Pro","code":"IBM Plex Mono"},"colors":{"lightMode":{"light":"#faf8f8","lightgray":"#e5e5e5","gray":"#b8b8b8","darkgray":"#4e4e4e","dark":"#2b2b2b","secondary":"#284b63","tertiary":"#84a59d","highlight":"rgba(143, 159, 169, 0.15)"},"darkMode":{"light":"#161618","lightgray":"#393639","gray":"#646464","darkgray":"#d4d4d4","dark":"#ebebec","secondary":"#7b97aa","tertiary":"#84a59d","highlight":"rgba(143, 159, 169, 0.15)"}}}'
+          SITE_TITLE: 'My Published Notes'
+          LOCALE: 'ja-JP'
+          ENABLE_SPA: 'true'
+          ENABLE_POPOVERS: 'true'
+          BASE_URL: 'xcd0.github.io/public-memo'
+          FONT_HEADER: 'Schibsted Grotesk'
+          FONT_BODY: 'Source Sans Pro'
+          FONT_CODE: 'IBM Plex Mono'
         run: |
           # Quartzがセットアップ済みかチェック。
           if [ ! -f "package.json" ] || ! grep -q "quartz" package.json; then
@@ -71,30 +78,53 @@ EOF
             # quartz.config.tsを生成。
             npx quartz create --strategy=empty
 
-            # 設定ファイルを上書き。
-            cat > quartz.config.ts << 'EOFCONFIG'
+            # 設定ファイルを上書き（環境変数から値を取得）。
+            cat > quartz.config.ts << EOFCONFIG
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
-const config = $QUARTZ_CONFIG
-
 const quartzConfig: QuartzConfig = {
   configuration: {
-    pageTitle: config.siteTitle,
-    enableSPA: config.enableSPA,
-    enablePopovers: config.enablePopovers,
+    pageTitle: "${SITE_TITLE}",
+    enableSPA: ${ENABLE_SPA},
+    enablePopovers: ${ENABLE_POPOVERS},
     analytics: {
       provider: "plausible",
     },
-    locale: config.locale,
-    baseUrl: config.baseUrl,
+    locale: "${LOCALE}",
+    baseUrl: "${BASE_URL}",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
-      typography: config.typography,
-      colors: config.colors,
+      typography: {
+        header: "${FONT_HEADER}",
+        body: "${FONT_BODY}",
+        code: "${FONT_CODE}"
+      },
+      colors: {
+        lightMode: {
+          light: "#faf8f8",
+          lightgray: "#e5e5e5",
+          gray: "#b8b8b8",
+          darkgray: "#4e4e4e",
+          dark: "#2b2b2b",
+          secondary: "#284b63",
+          tertiary: "#84a59d",
+          highlight: "rgba(143, 159, 169, 0.15)"
+        },
+        darkMode: {
+          light: "#161618",
+          lightgray: "#393639",
+          gray: "#646464",
+          darkgray: "#d4d4d4",
+          dark: "#ebebec",
+          secondary: "#7b97aa",
+          tertiary: "#84a59d",
+          highlight: "rgba(143, 159, 169, 0.15)"
+        }
+      }
     },
   },
   plugins: {
