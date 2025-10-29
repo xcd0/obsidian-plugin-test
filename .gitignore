@@ -1,0 +1,3 @@
+*.zip
+.obsidian-publish-tmp
+.obsidian/plugins/

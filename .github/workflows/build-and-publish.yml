@@ -1,0 +1,225 @@
+name: Build and Publish to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'memolog/**'
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout vault repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Clone publish repository
+        env:
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        run: |
+          git clone https://${PUBLISH_TOKEN}@github.com/xcd0/public-memo.git publish-repo
+          cd publish-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Setup Quartz in publish repository
+        working-directory: publish-repo
+        env:
+          QUARTZ_CONFIG: '{
+  "siteTitle": "My Published Notes",
+  "locale": "ja-JP",
+  "enableSPA": true,
+  "enablePopovers": true,
+  "baseUrl": "xcd0.github.io/public-memo",
+  "typography": {
+    "header": "Schibsted Grotesk",
+    "body": "Source Sans Pro",
+    "code": "IBM Plex Mono"
+  },
+  "colors": {
+    "lightMode": {
+      "light": "#faf8f8",
+      "lightgray": "#e5e5e5",
+      "gray": "#b8b8b8",
+      "darkgray": "#4e4e4e",
+      "dark": "#2b2b2b",
+      "secondary": "#284b63",
+      "tertiary": "#84a59d",
+      "highlight": "rgba(143, 159, 169, 0.15)"
+    },
+    "darkMode": {
+      "light": "#161618",
+      "lightgray": "#393639",
+      "gray": "#646464",
+      "darkgray": "#d4d4d4",
+      "dark": "#ebebec",
+      "secondary": "#7b97aa",
+      "tertiary": "#84a59d",
+      "highlight": "rgba(143, 159, 169, 0.15)"
+    }
+  }
+}'
+        run: |
+          # Quartzがセットアップ済みかチェック。
+          if [ ! -f "package.json" ] || ! grep -q "quartz" package.json; then
+            echo "Quartz is not setup. Setting up now..."
+
+            # package.jsonを作成。
+            cat > package.json << 'EOF'
+{
+  "name": "@jackyzha0/quartz",
+  "description": "Quartz - a fast, batteries-included static-site generator",
+  "version": "4.0.0",
+  "type": "module",
+  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://quartz.jzhao.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackyzha0/quartz.git"
+  },
+  "scripts": {
+    "build": "npx quartz build"
+  },
+  "dependencies": {
+    "@jackyzha0/quartz": "^4.0.0"
+  }
+}
+EOF
+
+            # Quartzをインストール。
+            npm install
+
+            # quartz.config.tsを生成。
+            npx quartz create --strategy=empty
+
+            # 設定ファイルを上書き。
+            cat > quartz.config.ts << 'EOFCONFIG'
+import { QuartzConfig } from "./quartz/cfg"
+import * as Plugin from "./quartz/plugins"
+
+const config = $QUARTZ_CONFIG
+
+const quartzConfig: QuartzConfig = {
+  configuration: {
+    pageTitle: config.siteTitle,
+    enableSPA: config.enableSPA,
+    enablePopovers: config.enablePopovers,
+    analytics: {
+      provider: "plausible",
+    },
+    locale: config.locale,
+    baseUrl: config.baseUrl,
+    ignorePatterns: ["private", "templates", ".obsidian"],
+    defaultDateType: "created",
+    theme: {
+      fontOrigin: "googleFonts",
+      cdnCaching: true,
+      typography: config.typography,
+      colors: config.colors,
+    },
+  },
+  plugins: {
+    transformers: [
+      Plugin.FrontMatter(),
+      Plugin.CreatedModifiedDate({
+        priority: ["frontmatter", "filesystem"],
+      }),
+      Plugin.SyntaxHighlighting({
+        theme: {
+          light: "github-light",
+          dark: "github-dark",
+        },
+        keepBackground: false,
+      }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.GitHubFlavoredMarkdown(),
+      Plugin.TableOfContents(),
+      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.Description(),
+      Plugin.Latex({ renderEngine: "katex" }),
+    ],
+    filters: [Plugin.RemoveDrafts()],
+    emitters: [
+      Plugin.AliasRedirects(),
+      Plugin.ComponentResources(),
+      Plugin.ContentPage(),
+      Plugin.FolderPage(),
+      Plugin.TagPage(),
+      Plugin.ContentIndex({
+        enableSiteMap: true,
+        enableRSS: true,
+      }),
+      Plugin.Assets(),
+      Plugin.Static(),
+      Plugin.NotFoundPage(),
+    ],
+  },
+}
+
+export default quartzConfig
+EOFCONFIG
+
+            git add .
+            git commit -m "feat: Auto-setup Quartz" || echo "No changes to commit"
+
+            echo "Quartz setup completed!"
+          else
+            echo "Quartz is already setup."
+          fi
+
+      - name: Clear and copy Markdown files to content directory
+        run: |
+          # content/ディレクトリをクリア（.gitは保持）。
+          find publish-repo/content -mindepth 1 ! -path '*/\.git/*' -delete 2>/dev/null || true
+
+          # 公開対象ディレクトリのMarkdownファイルをコピー。
+          mkdir -p publish-repo/content
+          if [ -d "memolog" ]; then
+            cp -r memolog/* publish-repo/content/ || true
+          fi
+
+          # ファイル数を確認。
+          file_count=$(find publish-repo/content -name "*.md" | wc -l)
+          echo "Copied $file_count Markdown files"
+
+      - name: Build Quartz
+        working-directory: publish-repo
+        run: |
+          # Node modules がない場合はインストール。
+          if [ ! -d "node_modules" ]; then
+            npm install
+          fi
+
+          # Quartzでビルド。
+          npm run build
+
+          echo "Quartz build completed!"
+          ls -la public/
+
+      - name: Push built site to publish repository
+        working-directory: publish-repo
+        env:
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        run: |
+          git add .
+
+          # 変更があればコミット。
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: Update published site ($(date -u +%Y-%m-%d %H:%M:%S))"
+            git push https://${PUBLISH_TOKEN}@github.com/xcd0/public-memo.git main
+            echo "Changes pushed to publish repository"
+          fi

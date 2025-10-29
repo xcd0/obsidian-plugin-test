@@ -1,0 +1,228 @@
+{
+  "main": {
+    "id": "7c0b8e3870ce25b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "0ebae40dd4cd3e09",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c48f864eb328147d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "memolog/2025-10-29/memo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "memo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "641877778eedc62b",
+    "type": "split",
+    "children": [
+      {
+        "id": "630f6e29b95cc32a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36926686466ece66",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "aa1a38052d8949c7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "fe5ea6a01968d707",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "64bfac89f9233993",
+    "type": "split",
+    "children": [
+      {
+        "id": "afd424ef2dc34865",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "26d5b5d8f833ee64",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "memolog/2025-10-28/memo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "memoへのバックリンク"
+            }
+          },
+          {
+            "id": "83452507708dea84",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "アウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "d74fc0589e6637e0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "7cfc31b9682bb534",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "memolog/2025-10-29/memo.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "memoのアウトライン"
+            }
+          },
+          {
+            "id": "2d9ce89ce19f3b93",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 415.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:Create new base": false,
+      "memolog:memolog": false,
+      "github-pages-publish:GitHub Pagesに公開": false,
+      "github-pages-publish:GitHub Actions セットアップ": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "c48f864eb328147d",
+  "lastOpenFiles": [
+    "memolog/attachments/1761700239619_dumpveiwer___.pdf",
+    "memolog/2025-10-29/memo.md",
+    "obsidian-github-pages-settings (1).json",
+    "obsidian-github-pages-settings.json",
+    "memolog/memolog-setting.json",
+    "memolog/attachments",
+    "memolog/2025-10-29/attachments/pasted-image-1761700216375.gif",
+    "memolog/2025-10-29/attachments/pasted-image-1761700092495.png",
+    "memolog/2025-10-29/attachments",
+    "memolog/2025-10-29",
+    "memolog/2025-10-28/memo.md",
+    "memolog/2025-10-28",
+    "memolog/2025-10-27/memo.md",
+    "memolog/2025-10-27",
+    "memolog/2025-10-27/🕊️.md",
+    "memolog/2025-10-27/work.md",
+    "memolog/2025-10-27/hobby.md",
+    "memolog/2025-10-27/仕事.md",
+    "memolog/2025-10-28/hobby.md",
+    "memolog/2025-10-28/work.md",
+    "memolog/2025-10-29/work.md",
+    "memolog/2025-10-29/🕊️.md",
+    "memolog/2025-10-29/hobby.md",
+    "memolog/2025-10-27/memo.md.backup-1761704744851",
+    "memolog/2025/10/28.md",
+    "memolog/2025-10-27/attachments/pasted-image-1761538090695.jpg",
+    "memolog/🕊️/2025-10-27/memo.md",
+    "memolog/2025-10-27/attachments/pasted-image-1761538071342.png",
+    "memolog/2025-10-27/attachments/pasted-image-1761533120723.png",
+    "memolog/attachments/1761537825652_pasted-image-1761533254845.png",
+    "memolog/2025-10-27/attachments/pasted-image-1761533813382.png",
+    "memolog/2025-10-27/attachments/pasted-image-1761533624519.png",
+    "memolog/2025-10-27/attachments/pasted-image-1761533254845.png",
+    "memolog/attachments/pasted-image-1761532533793.png",
+    "memolog/2025-10-24/memo.md",
+    "memolog/仕事/2025-10-24/memo.md",
+    "memolog/趣味/2025-10-24/memo.md",
+    "memolog/仕事/2025/10-24/memo.md",
+    "memolog/2025/10-24/memo.md",
+    "memolog/仕事/2025/10/24.md"
+  ]
+}
