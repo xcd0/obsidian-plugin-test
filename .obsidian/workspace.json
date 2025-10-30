@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/memolog/20251030-work.md",
+                "file": "public/memolog/20251027-work.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20251030-work"
+              "title": "20251027-work"
             }
           }
         ]
@@ -141,17 +141,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "public/memolog/20251030-work.md",
+                "file": "public/memolog/20251027-work.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "20251030-workのアウトライン"
+              "title": "20251027-workのアウトライン"
             }
           },
           {
-            "id": "e6735f9674deaef8",
+            "id": "55730a868b7785b9",
             "type": "leaf",
             "state": {
               "type": "memolog-sidebar",
@@ -182,8 +182,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6096212f45b0a02f",
+  "active": "55730a868b7785b9",
   "lastOpenFiles": [
+    "public/memolog/20251030-todo.md",
+    "public/memolog/20251030-work.md",
     "public/memolog/work/20251030.md",
     "public/memolog/20251027-work.md",
     "public/memolog/work/20251027.md.backup-1761811493608",
@@ -191,9 +193,7 @@
     "public/memolog/work/20251028.md.backup-1761811492969",
     "public/memolog/20251029-work.md",
     "public/memolog/work/20251029.md.backup-1761811492387",
-    "public/memolog/20251030-work.md",
     "public/memolog/work/20251030.md.backup-1761811491682",
-    "public/memolog/20251030-todo.md",
     "public/memolog/todo/20251030.md.backup-1761811491354",
     "public/memolog/20251030-selfmade.md",
     "public/memolog/selfmade/20251030.md.backup-1761811490826",
