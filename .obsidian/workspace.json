@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/memolog/todo/20251030.md",
+                "file": "public/memolog/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20251030"
+              "title": "index"
             }
           }
         ]
@@ -141,17 +141,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "public/memolog/todo/20251030.md",
+                "file": "public/memolog/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "20251030のアウトライン"
+              "title": "indexのアウトライン"
             }
           },
           {
-            "id": "012c01c3d5161331",
+            "id": "30a3a336fd931395",
             "type": "leaf",
             "state": {
               "type": "memolog-sidebar",
@@ -182,14 +182,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "012c01c3d5161331",
+  "active": "30a3a336fd931395",
   "lastOpenFiles": [
-    "public/memolog/index.md",
     "public/memolog/_trash.md",
+    "public/memolog/🕊️/20251029.md",
+    "public/memolog/🕊️/20251027.md",
+    "public/memolog/todo/20251030.md",
+    "public/memolog/index.md",
     "public/memolog/hobby/20251030.md",
     "public/memolog/mobile/20251030.md",
     "public/memolog/mobile",
-    "public/memolog/todo/20251030.md",
     "public/memolog/random/20251030.md",
     "public/memolog/new-category/20251030.md",
     "public/memolog/random",
@@ -206,9 +208,7 @@
     "public/memolog/work/2025-10-28/memo.md.backup-1761798885228",
     "public/memolog/work/20251027.md",
     "public/memolog/work/2025-10-27/memo.md.backup-1761798885181",
-    "public/memolog/🕊️/20251029.md",
     "public/memolog/🕊️/2025-10-29/memo.md.backup-1761798885154",
-    "public/memolog/🕊️/20251027.md",
     "public/memolog/hobby/20251029.md",
     "public/memolog/hobby/20251028.md",
     "public/memolog/仕事/20251027.md",
