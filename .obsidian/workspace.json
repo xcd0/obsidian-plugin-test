@@ -11,10 +11,14 @@
             "id": "6096212f45b0a02f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "public/memolog/20251030-work.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "20251030-work"
             }
           }
         ]
@@ -137,12 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "public/memolog/20251030-work.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "アウトライン"
+              "title": "20251030-workのアウトライン"
             }
           },
           {
@@ -177,7 +182,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "36926686466ece66",
+  "active": "6096212f45b0a02f",
   "lastOpenFiles": [
     "public/memolog/work/20251030.md",
     "public/memolog/20251027-work.md",
