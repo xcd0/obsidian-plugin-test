@@ -1,3 +1,4 @@
 *.zip
 .obsidian-publish-tmp
 .obsidian/plugins/
+backup-*
