@@ -78,6 +78,26 @@ jobs:
             cp -r memolog/* publish-repo/content/ || true
           fi
 
+          # index.mdが存在しない場合は自動生成。
+          if [ ! -f "publish-repo/content/index.md" ]; then
+            echo "Creating default index.md..."
+            cat > publish-repo/content/index.md << 'INDEXEOF'
+---
+title: Home
+---
+
+# Welcome
+
+This is my published notes.
+
+## Recent Notes
+
+INDEXEOF
+            # 最近のMarkdownファイルをリストアップ（最大10件）。
+            find publish-repo/content -name "*.md" ! -name "index.md" -type f -printf "%T@ %p
+" |               sort -rn | head -10 | cut -d' ' -f2- |               sed 's|publish-repo/content/||' | sed 's|.md$||' |               sed 's|^|- [[|' | sed 's|$|]]|' >> publish-repo/content/index.md
+          fi
+
           # ファイル数を確認。
           file_count=$(find publish-repo/content -name "*.md" | wc -l)
           echo "Copied $file_count Markdown files"
