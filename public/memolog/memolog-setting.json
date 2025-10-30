@@ -56,5 +56,9 @@
 	"attachmentPath": "./attachments",
 	"attachmentNameFormat": "pasted-%s-%f%e",
 	"searchHistoryMaxSize": 50,
-	"showAllTab": true
+	"showAllTab": true,
+	"enableTrash": true,
+	"trashFilePath": "_trash",
+	"trashRetentionDays": 30,
+	"showTrashTab": true
 }
