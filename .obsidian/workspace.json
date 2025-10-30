@@ -151,7 +151,7 @@
             }
           },
           {
-            "id": "a7f54055c3d2f191",
+            "id": "012c01c3d5161331",
             "type": "leaf",
             "state": {
               "type": "memolog-sidebar",
@@ -182,7 +182,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a7f54055c3d2f191",
+  "active": "012c01c3d5161331",
   "lastOpenFiles": [
     "public/memolog/index.md",
     "public/memolog/_trash.md",

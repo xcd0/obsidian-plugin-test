@@ -4,7 +4,7 @@ on:
   push:
     branches: [main, master]
     paths:
-      - 'memolog/**'
+      - 'public/memolog/**'
 
 permissions:
   contents: read
@@ -72,10 +72,20 @@ jobs:
           # content/ディレクトリをクリア（.gitは保持）。
           find publish-repo/content -mindepth 1 ! -path '*/\.git/*' -delete 2>/dev/null || true
 
-          # 公開対象ディレクトリのMarkdownファイルをコピー。
+          # 公開対象ディレクトリのMarkdownファイルをコピー（除外プレフィックスで始まるファイル/ディレクトリは除外）。
           mkdir -p publish-repo/content
-          if [ -d "memolog" ]; then
-            cp -r memolog/* publish-repo/content/ || true
+          if [ -d "public/memolog" ]; then
+            # まずすべてをコピー。
+            cp -r public/memolog/* publish-repo/content/ 2>/dev/null || true
+
+            # 除外プレフィックスで始まるファイル/ディレクトリを削除。
+            EXCLUDE_PREFIXES=". _"
+            for prefix in $EXCLUDE_PREFIXES; do
+              # ディレクトリを再帰的に削除（サブディレクトリ内も含む）。
+              find publish-repo/content -name "${prefix}*" -type d -prune -exec rm -rf {} \; 2>/dev/null || true
+              # ファイルを削除。
+              find publish-repo/content -name "${prefix}*" -type f -delete 2>/dev/null || true
+            done
           fi
 
           # ファイル数を確認。
