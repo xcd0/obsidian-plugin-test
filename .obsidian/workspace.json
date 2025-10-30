@@ -11,14 +11,10 @@
             "id": "6096212f45b0a02f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "public/memolog/random/20251030.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "20251030"
+              "title": "新規タブ"
             }
           }
         ]
@@ -141,17 +137,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "public/memolog/random/20251030.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "20251030のアウトライン"
+              "title": "アウトライン"
             }
           },
           {
-            "id": "30a3a336fd931395",
+            "id": "e6735f9674deaef8",
             "type": "leaf",
             "state": {
               "type": "memolog-sidebar",
@@ -165,7 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 656.5
+    "width": 501.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,11 +177,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "30a3a336fd931395",
+  "active": "36926686466ece66",
   "lastOpenFiles": [
+    "public/memolog/work/20251030.md",
+    "public/memolog/20251027-work.md",
+    "public/memolog/work/20251027.md.backup-1761811493608",
+    "public/memolog/20251028-work.md",
+    "public/memolog/work/20251028.md.backup-1761811492969",
+    "public/memolog/20251029-work.md",
+    "public/memolog/work/20251029.md.backup-1761811492387",
+    "public/memolog/20251030-work.md",
+    "public/memolog/work/20251030.md.backup-1761811491682",
+    "public/memolog/20251030-todo.md",
+    "public/memolog/todo/20251030.md.backup-1761811491354",
+    "public/memolog/20251030-selfmade.md",
+    "public/memolog/selfmade/20251030.md.backup-1761811490826",
+    "public/memolog/20251029-selfmade.md",
+    "public/memolog/selfmade/20251029.md.backup-1761811490530",
+    "public/memolog/20251030-random.md",
+    "public/memolog/random/20251030.md.backup-1761811489957",
+    "public/memolog/20251030-mobile.md",
+    "public/memolog/mobile/20251030.md.backup-1761811489670",
+    "public/memolog/20251030-memo.md",
+    "public/memolog/memo/20251030.md.backup-1761811489058",
+    "public/memolog/random/20251030.md",
     "public/memolog/selfmade/20251029.md",
     "public/memolog/memo/20251030.md",
-    "public/memolog/memo",
     "public/memolog/index.md",
     "public/memolog/new-category/20251030.md",
     "public/memolog/_trash.md",
@@ -195,31 +211,10 @@
     "public/memolog/todo/20251030.md",
     "public/memolog/hobby/20251030.md",
     "public/memolog/mobile/20251030.md",
-    "public/memolog/mobile",
-    "public/memolog/random/20251030.md",
-    "public/memolog/random",
-    "public/memolog/new-category",
     "public/memolog/selfmade/20251030.md",
-    "public/memolog/selfmade",
-    "public/memolog/todo",
     "public/memolog/work/2025-10-30/memo.md",
-    "public/memolog/work/20251030.md",
-    "public/memolog/work/2025-10-30/memo.md.backup-1761798885322",
     "public/memolog/work/20251029.md",
-    "public/memolog/work/2025-10-29/memo.md.backup-1761798885265",
     "public/memolog/work/20251028.md",
-    "public/memolog/work/2025-10-28/memo.md.backup-1761798885228",
-    "public/memolog/work/20251027.md",
-    "public/memolog/work/2025-10-27/memo.md.backup-1761798885181",
-    "public/memolog/hobby/20251029.md",
-    "public/memolog/hobby/20251028.md",
-    "public/memolog/仕事/20251027.md",
-    "public/memolog/work/2025-10-29/memo.md",
-    "public/memolog/work/2025-10-28/memo.md",
-    "public/memolog/work/2025-10-27/memo.md",
-    "public/memolog/hobby/2025-10-29/memo.md",
-    "public/memolog/hobby/2025-10-28/memo.md",
-    "public/memolog/🕊️/2025-10-29/memo.md",
     "public/memolog/2025-10-29/attachments/pasted-image-1761700216375.gif",
     "public/memolog/2025-10-29/attachments/pasted-image-1761700092495.png",
     "memolog/2025-10-29/attachments/pasted-image-1761700216375.gif",
