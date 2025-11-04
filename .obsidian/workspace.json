@@ -11,10 +11,14 @@
             "id": "af086f8d06922ce2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "public/memolog/random.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "random"
             }
           }
         ]
@@ -109,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "public/memolog/random.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "アウトゴーイングリンク"
+              "title": "randomからのアウトゴーイングリンク"
             }
           },
           {
@@ -137,16 +142,17 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "public/memolog/random.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "アウトライン"
+              "title": "randomのアウトライン"
             }
           },
           {
-            "id": "65f1c5f36a09590e",
+            "id": "86514be0aaed8dac",
             "type": "leaf",
             "state": {
               "type": "memolog-sidebar",
@@ -177,7 +183,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "af086f8d06922ce2",
+  "active": "86514be0aaed8dac",
   "lastOpenFiles": [
     "public/memolog/index.md",
     "public/memolog/random.md",
