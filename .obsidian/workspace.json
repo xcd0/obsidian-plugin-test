@@ -11,10 +11,14 @@
             "id": "6096212f45b0a02f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "public/memolog/mobile.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "mobile"
             }
           }
         ]
@@ -137,16 +141,17 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "public/memolog/mobile.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "アウトライン"
+              "title": "mobileのアウトライン"
             }
           },
           {
-            "id": "a2c0d832dc0bb211",
+            "id": "eed116f774194474",
             "type": "leaf",
             "state": {
               "type": "memolog-sidebar",
@@ -177,25 +182,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6096212f45b0a02f",
+  "active": "eed116f774194474",
   "lastOpenFiles": [
     "public/memolog/work.md",
-    "public/memolog/todo.md",
-    "public/memolog/selfmade.md",
-    "public/memolog/random.md",
-    "public/memolog/mobile.md",
-    "public/memolog/memo.md",
     "public/memolog/index.md",
-    "public/memolog/memo.md.backup-1761886345772",
-    "public/memolog/todo.md.backup-1761886344787",
-    "public/memolog/selfmade.md.backup-1761886343297",
-    "public/memolog/random.md.backup-1761886342367",
-    "public/memolog/work.md.backup-1761886341017",
-    "public/memolog/mobile.md.backup-1761886340049",
-    "backup-public-memolog-2025-10-31T04-52-19-984Z.json",
-    "backup-public-memolog-2025-10-31T04-52-19-984Z.zip",
-    "public/memolog/20251030-memo.md.backup-1761886051409",
-    "public/memolog/20251030-mobile.md.backup-1761886050483",
+    "public/memolog/2025.md",
+    "public/memolog/memo.md",
+    "public/memolog/mobile.md",
+    "public/memolog/random.md",
+    "public/memolog/selfmade.md",
+    "public/memolog/todo.md",
+    "public/memolog/2025.md.backup-1761887722928",
+    "backup-public-memolog-2025-10-31T05-15-22-884Z.json",
+    "backup-public-memolog-2025-10-31T05-15-22-884Z.zip",
+    "public/memolog/memo.md.backup-1761887576066",
+    "public/memolog/mobile.md.backup-1761887574461",
+    "public/memolog/random.md.backup-1761887572445",
+    "public/memolog/selfmade.md.backup-1761887569869",
+    "public/memolog/todo.md.backup-1761887569584",
+    "public/memolog/work.md.backup-1761887568489",
+    "backup-public-memolog-2025-10-31T05-12-48-436Z.json",
     "public/memolog/20251030-todo.md",
     "public/memolog/20251027-work.md",
     "public/memolog/20251031-random.md",
@@ -213,7 +219,6 @@
     "public/memolog/20251030-memo.md",
     "public/memolog/random/20251030.md",
     "public/memolog/selfmade/20251029.md",
-    "public/memolog/memo/20251030.md",
     "public/memolog/2025-10-29/attachments/pasted-image-1761700216375.gif",
     "public/memolog/2025-10-29/attachments/pasted-image-1761700092495.png",
     "memolog/2025-10-29/attachments/pasted-image-1761700216375.gif",
