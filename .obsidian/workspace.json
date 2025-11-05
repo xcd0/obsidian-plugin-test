@@ -152,7 +152,7 @@
             }
           },
           {
-            "id": "cf99bf16a06890c4",
+            "id": "aef3d5eba8f12034",
             "type": "leaf",
             "state": {
               "type": "memolog-sidebar",
@@ -166,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 486.5
+    "width": 431.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,13 +178,11 @@
       "command-palette:コマンドパレットを開く": false,
       "bases:Create new base": false,
       "memolog:memolog": false,
-      "github-pages-publish:GitHub Pagesに公開": false,
       "github-pages-publish:GitHub Actions セットアップ": false,
-      "obsidian-git:Open Git source control": false,
-      "sample-plugin:Sample Plugin": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cf99bf16a06890c4",
+  "active": "aef3d5eba8f12034",
   "lastOpenFiles": [
     "public/memolog/index.md",
     "public/memolog/random.md",

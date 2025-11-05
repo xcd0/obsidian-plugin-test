@@ -148,6 +148,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "github-pages-publish:GitHub Actions セットアップ": false,
       "switcher:クイックスイッチャーを開く": false,
       "graph:グラフビューを開く": false,
       "canvas:新規キャンバスを作成": false,
@@ -158,6 +159,15 @@
       "memolog:memolog": false
     }
   },
-  "active": "da657e5808982ab8",
-  "lastOpenFiles": []
+  "active": "c22a78be4408ac9d",
+  "lastOpenFiles": [
+    "publicmemolog/memolog-setting.json",
+    "publicmemolog",
+    "publimemolog/memolog-setting.json",
+    "publimemolog",
+    "pubmemolog/memolog-setting.json",
+    "pubmemolog",
+    "poumemolog/memolog-setting.json",
+    "poumemolog"
+  ]
 }
