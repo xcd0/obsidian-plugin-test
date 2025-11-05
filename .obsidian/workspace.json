@@ -152,7 +152,7 @@
             }
           },
           {
-            "id": "86514be0aaed8dac",
+            "id": "cf99bf16a06890c4",
             "type": "leaf",
             "state": {
               "type": "memolog-sidebar",
@@ -180,10 +180,11 @@
       "memolog:memolog": false,
       "github-pages-publish:GitHub Pagesに公開": false,
       "github-pages-publish:GitHub Actions セットアップ": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "sample-plugin:Sample Plugin": false
     }
   },
-  "active": "86514be0aaed8dac",
+  "active": "cf99bf16a06890c4",
   "lastOpenFiles": [
     "public/memolog/index.md",
     "public/memolog/random.md",
